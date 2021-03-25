@@ -1,5 +1,8 @@
 import React from 'react';
-import Jumbotron from "react-bootstrap/Jumbotron";
+import InputGroup from "react-bootstrap/InputGroup";
+import FormControl from "react-bootstrap/FormControl";
+import Button from "react-bootstrap/Button"
+import Container from "react-bootstrap/Container"
 
 
 
@@ -7,15 +10,21 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 
 function Search() {
     return (
-        <Jumbotron>
-            <h1>Virtual Library</h1>
-            <p>
-                Search, and save books using the google books API.
-        </p>
-            <p>
-
-            </p>
-        </Jumbotron>
+        <Container>
+            <h5>Book Search:</h5>
+            <br></br>
+            <h6>Book</h6>
+            <InputGroup className="mb-3">
+                <FormControl
+                    placeholder="Search for a book"
+                    aria-label="Search for a book"
+                    aria-describedby="basic-addon2"
+                />
+                <InputGroup.Append>
+                    <Button variant="outline-secondary">Search</Button>
+                </InputGroup.Append>
+            </InputGroup>
+        </Container>
     );
 }
 
