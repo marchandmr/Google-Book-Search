@@ -1,0 +1,26 @@
+h5 {
+    text-align: center;
+ 
+}
+
+h6{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+p
+{
+    text-align: center;
+}
+
+ul
+{
+    border: 2px dotted #333;
+}
+
+.save
+{
+  left:550px;
+  position: relative;
+  margin-bottom: 10px;
+}

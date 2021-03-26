@@ -6,9 +6,10 @@ const bookSchema = new Schema({
     image: { type: String, uninque: true },
     title: { type: String, required: true },
     author: { type: String, required: true },
-    description: { type: String, required: true }
+    description: { type: String, required: true },
+    link: { type: String, required: true }
 });
 
-const Book = mongoose.model("Book", bookSchema);
+const Books = mongoose.model("Book", bookSchema);
 
-module.exports = Book;
+module.exports = Books;

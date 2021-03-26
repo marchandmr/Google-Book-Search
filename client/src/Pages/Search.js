@@ -7,6 +7,7 @@ import API from "../utils/API"
 import React, { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col"
+import "./search.css"
 
 function Search() {
 
@@ -21,11 +22,26 @@ function Search() {
         API.googleBooks(search)
             .then(res => {
 
-                console.log(search)
+
                 setBooks(res.data.items)
-                console.log(books)
-                console.log(res.data.items)
             })
+    }
+
+    function saveBook(bookInfo) {
+
+        API.saveBook({
+
+            id: bookInfo.id,
+            image: bookInfo.img,
+            title: bookInfo.title,
+            author: bookInfo.author,
+            link: bookInfo.link,
+            description: bookInfo.description
+        }
+
+        )
+            .catch(err => console.log(err));
+        console.log(bookInfo.title)
     }
 
     function handleFormSubmit(event) {
@@ -40,13 +56,15 @@ function Search() {
 
 
 
+
+
     return (
 
         < div >
             <Container>
                 <h5>Book Search:</h5>
                 <br></br>
-                <h6>Book</h6>
+
                 <InputGroup className="mb-3">
                     <FormControl value={search}
                         onChange={handleInputChange}
@@ -59,27 +77,37 @@ function Search() {
                     </InputGroup.Append>
                 </InputGroup>
             </Container>
-
-
-            {/* {books.map(({ cell, email, login, location, name, picture }) => {
+            <br></br>
+            {books.map(book => {
+                book = {
+                    id: book.id,
+                    title: book.volumeInfo.title,
+                    link: book.volumeInfo.infoLink,
+                    description: book.volumeInfo.description,
+                    image: book.volumeInfo.imageLinks.thumbnail,
+                    author: book.volumeInfo.authors
+                }
 
                 return (
 
                     < ul >
                         <Container fluid="md">
-                            <Row key={login.password}>
-                                <Col key={login.password}>  <img src={picture.large} alt="employee" /></Col>
-                                <Col > {name.first} {name.last}</Col>
-                                <Col > {location.country}</Col>
-                                <Col >{email}</Col>
-                                <Col >{cell}</Col>
+                            <Row>
+                                <Col ><h1>{book.title}</h1><br></br><h6>{book.author}</h6></Col>
                             </Row>
+                            <Row>
+                                <Col md={2} key={book.id}>  <img src={book.image} alt="bookImage" /></Col>
+                                <Col><p>{book.description}</p></Col>
+                            </Row>
+                            <Row>
+                                <Col ><a href={book.link}>Click here to learn more</a></Col>
+                            </Row>
+                            <Row> <Button className="save" variant="outline-secondary" onClick={event => saveBook(book)}>Save</Button></Row>
                         </Container>
                     </ul>
-                );
-            })
-            } */}
 
+                )
+            })}
         </div >
     );
 }
