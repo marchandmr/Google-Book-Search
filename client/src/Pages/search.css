@@ -6,21 +6,91 @@ h5 {
 h6{
     text-align: center;
     margin-bottom: 50px;
+    color: #0B4F6C;
 }
 
 p
 {
     text-align: center;
+    color: #0B4F6C;
 }
 
 ul
 {
-    border: 2px dotted #333;
+    border: 2px dotted #01BAEF;
 }
 
 .save
 {
-  left:550px;
-  position: relative;
-  margin-bottom: 10px;
+  left:550px !important;
+  position: relative !important;
+  margin-bottom: 10px !important;
+  -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    border-radius: 20px !important;
+    color: #FFFFFF !important;
+    font-family: Brush Script MT !important;
+    font-weight: 100 !important;
+    padding: 20px !important;
+    background-color: #B80C09 !important;
+    border: solid #01BAEF 1px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+    text-align: center !important;
+}
+
+
+
+
+.jumbotron
+{
+    margin-bottom:0  !important;
+    background-color: #B80C09 !important;
+}
+
+.navbar
+{
+    margin-bottom: 50px;
+    background-color: #01BAEF !important;
+}
+
+h1
+{
+    color: #01BAEF;
+}
+
+body{
+ background-color: #FBFBFF;   
+}
+
+.virtual
+{
+    color: #040F16;
+}
+
+.headerSmall
+{
+    color: #040F16;
+}
+
+
+.delete
+{
+  left:550px !important;
+  position: relative !important;
+  margin-bottom: 10px !important;
+  -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    border-radius: 20px !important;
+    color: #FFFFFF !important;
+    font-family: Brush Script MT !important;
+    font-weight: 100 !important;
+    padding: 20px !important;
+    background-color: #B80C09 !important;
+    border: solid #01BAEF 1px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+    text-align: center !important;
 }

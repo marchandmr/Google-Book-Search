@@ -8,8 +8,8 @@ import "./header.css"
 function Header() {
     return (
         <Jumbotron>
-            <h1>Virtual Library</h1>
-            <p>
+            <h1 className="virtual">Virtual Library</h1>
+            <p className="headerSmall">
                 Search, and save books using the google books API.
         </p>
             <p>

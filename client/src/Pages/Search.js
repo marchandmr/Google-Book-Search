@@ -32,7 +32,7 @@ function Search() {
         API.saveBook({
 
             id: bookInfo.id,
-            image: bookInfo.img,
+            image: bookInfo.image,
             title: bookInfo.title,
             author: bookInfo.author,
             link: bookInfo.link,
@@ -40,8 +40,9 @@ function Search() {
         }
 
         )
-            .catch(err => console.log(err));
-        console.log(bookInfo.title)
+
+        console.log(bookInfo.author)
+        alert("Your book was saved")
     }
 
     function handleFormSubmit(event) {
