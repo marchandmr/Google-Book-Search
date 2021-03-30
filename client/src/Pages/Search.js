@@ -40,9 +40,9 @@ function Search() {
         }
 
         )
+            .then(alert("your book was saved"));
 
-        console.log(bookInfo.author)
-        alert("Your book was saved")
+
     }
 
     function handleFormSubmit(event) {
