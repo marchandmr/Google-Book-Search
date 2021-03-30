@@ -40,7 +40,6 @@ function Search() {
         }
 
         )
-            .then(alert("your book was saved"));
 
 
     }
