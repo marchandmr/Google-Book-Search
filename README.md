@@ -4,7 +4,7 @@
 
   ##  Description
   
-  Search for books, and save favorites for later, using the google books API and MongoDb.
+  Search for books, and save favorites for later, using the google books API, and MongoDb.
 
 
 ![](client/public/img.png)
