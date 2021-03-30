@@ -7,6 +7,9 @@
   Search for books, and save favorites for later, using the google books API and MongoDb.
 
 
+![](client/public/img.png)
+
+
   ## Table Of Contents
 
   * [Installation](#installation)
